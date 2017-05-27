@@ -72,8 +72,8 @@ ITEM_PIPELINES = {
      # 'recing.pipelines.MongoPipeline': 300,
     'recing.pipelines.JsonWriterPipeline': 500
  }
-MONGO_URI = '192.168.99.100:32768'
-MONGO_DATABASE = 'test_database'
+# MONGO_URI = '192.168.99.100:32768'
+# MONGO_DATABASE = 'test_database'
 
 # Enable and configure the AutoThro
 
