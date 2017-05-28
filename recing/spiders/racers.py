@@ -26,7 +26,15 @@ class MySpider(scrapy.Spider):
             racecourse = None
             noraces = None
 
-        item['racedate'] = self.racedate
-        item['racecourse'] = racecourse or None
-        item['noraces'] = noraces
-        return item
+        text_error = response.xpath('//div[@class="right620"]/div[@class="rowDivLeft font13"]/text()').extract()
+        string_error = str(text_error)
+
+        if string_error.find('NotReady') == -1:
+            item['racedate'] = self.racedate
+            item['racecourse'] = racecourse or None
+            item['noraces'] = noraces
+            yield item
+
+        else:
+            url = 'http://racing.hkjc.com/racing/Info/meeting/Results/english/Local/%s' % self.racedate
+            yield scrapy.Request(url, callback=self.parse, method="GET", dont_filter=True)
