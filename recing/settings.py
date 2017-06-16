@@ -69,9 +69,20 @@ ROBOTSTXT_OBEY = False
 # }
 
 ITEM_PIPELINES = {
-     # 'recing.pipelines.MongoPipeline': 300,
-    'recing.pipelines.JsonWriterPipeline': 500
+     'recing.pipelines.MongoPipeline': 300,
+    # 'recing.pipelines.JsonWriterPipeline': 500
  }
+
+
+ # MONGO_URI = '192.168.99.100:32769'
+ # MONGO_DATABASE = 'test_database'
+
+MONGO_URI = 'mongodb://127.0.0.1'
+MONGO_DATABASE = 'horsecoderesults'
+
+
+
+
 # MONGO_URI = '192.168.99.100:32768'
 # MONGO_DATABASE = 'test_database'
 

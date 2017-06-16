@@ -1,0 +1,21 @@
+{
+  "name": "raceDateChecker",
+  "version": "1.0.0",
+  "description": "HKJC#2 \"Is this date a ST HV or No Information?\" \"How many races in total?\" Given a racedate return json file [ { 'racedate': 20170516, 'racecourse': null, 'noraces': null, }, { 'racedate': 20170517, 'racecourse': 'HV', 'noraces': 8 },",
+  "main": "batchRun.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/seoasya/race2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/seoasya/race2#readme",
+  "dependencies": {
+    "d3": "^4.9.1",
+    "nsynjs": "0.0.9"
+  }
+}

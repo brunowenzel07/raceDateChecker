@@ -16,4 +16,4 @@ class RecingItem(scrapy.Item):
     racedate = scrapy.Field()
     racecourse = scrapy.Field()
     noraces = scrapy.Field()
-
+    racedate_str= scrapy.Field()
